@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*   {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    font-family: Quicksand, sans-serif;
+    background-color: #eaeaea;
+    margin: auto;
+}
+
+table   {
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+th, td {
+    padding: 1em;
+    border: 1px solid #969696;
+}
+
+h1  {
+    width: 100%;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    text-align: center;
+    font-family: serif;
+}
+
+
+thead   {
+    background-color: #1f1f1f;
+    color: #e4e4e4;
+}
+
+tbody tr:nth-of-type(odd)  {
+    background-color: #f5f5f5;
+}
+
+.warranty { 
+    margin: auto;
+    min-height: 550px;
+    max-width: 1500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url(../images/KV_pc.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    color: white;
+    text-align: center;
+}
+
+.warranty h2    {
+    font-size: 2.2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.warranty p    {
+    font-size: 1.2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: 0;
+}
+
+nav li {
+    margin: auto 1em;
+}
+
+nav a {
+    padding: 0.2em 1em;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    border: 1px solid #000;
+    border-radius: 60px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: #ffffff;
+}
+
+
+nav {
+    padding:1em;
+    width: 100%;
+    padding-top: 0.5em;
+    margin: 0;
+    padding-right: 0;
+    z-index: 9999;
+}
+
+footer  {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.top    {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+#executives, #history {
+    width: 100%;
+    min-width: 350px;
+    max-width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 1em;
+    box-shadow: 0px 0px 10px 2px #c5c5c5;
+}
+
+#executives:hover, #history:hover   {
+    box-shadow: none;
+}
+
+.top a  {
+    position: relative;
+    top: 70%;
+    background-color: black;
+    padding: 1em;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+}  
+
+.top p  {  
+    position: relative;
+    top: 64%;
+    font-size: 1.5em;
+}
+
+#executives {
+    background-image: url(../images/executives.webp);
+}
+
+#history    {
+    background-image: url(../images/history.webp);
+}
+
+.centered {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+
+#submit {
+    font-size:1em;
+    padding: 0.5em;
+    width: 100px;
+    margin:auto;
+}
+
+label   {
+    padding: 0.5em;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    padding: 0.6em;
+}
+
+@media (max-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+
+    thead tr    {
+        position: absolute;
+        top: -9999px;
+        left:-9999px;
+    }
+
+    tr  {
+        border: 1px solid #ddd;
+    }
+
+    td  {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 100px;
+    }
+
+    td::before  {
+        position: absolute;
+        top: 16px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before    { content: "Model"}
+    td:nth-of-type(2):before    { content: "Product Series"}
+    td:nth-of-type(3)::before   { content: "Display"}
+    td:nth-of-type(4)::before   { content: "Motherboard"}
+    td:nth-of-type(5)::before   { content: "Battery"}
+    td:nth-of-type(6)::before   { content: "Back Glass"}
+    
+    .top    {
+        flex-direction: column;  
+        align-items:center; 
+    }
+
+}
+
+@media (max-width: 768px)   {
+    table   {
+        max-width: 700px;
+        font-size: 1em;
+    }
+
+    nav a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eaeaea;
+        border-radius: 15px;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    nav a:hover {
+        border-bottom: 1px solid #000000;
+    }
+
+    nav {
+        padding: 0;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    nav li {
+        margin: 0;
+    }
+    nav ul {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        justify-content:center;
+    }
+
+
+}
